@@ -1,0 +1,820 @@
+html {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  background-color: rgb(52,89,97);
+}
+body {
+  margin: 0 auto;
+  width: 1080px;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  height: 4rem;
+  width: 1080px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 24px;
+  margin-right: 8px;
+}
+
+#logo img {
+  height: 3rem;
+  display: flex;
+}
+
+#logo a:hover {
+  background-color: rgb(213,248,255);
+}
+
+#logo a:active {
+  background-color: red;
+}
+
+header span {
+  color: rgb(52,89,97);
+  font-size: 1.33rem;
+}
+
+#colmar {
+  font-weight: bold;
+  color: rgb(64, 64, 64);
+}
+
+.desktop {
+  margin-right: 1rem;
+}
+
+.desktop a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: rgb(64, 64, 64);
+}
+
+nav a:hover {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+nav a:active {
+  color: rgb(213,248,255);
+  background-color: black;
+  border-radius: 5px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1079px) {
+
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .mobile img {
+    height: 32px;
+  }
+
+  .mobile a:hover {
+    background-color: rgb(255,233,155);
+    border-radius: 5px;
+  }
+
+  .mobile a:active {
+    background-color: orange;
+    border-radius: 5px;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .mobile img {
+    height: 32px;
+  }
+
+  .mobile a:hover {
+    background-color: rgb(255,233,155);
+    border-radius: 5px;
+  }
+
+  .mobile a:active {
+    background-color: orange;
+    border-radius: 5px;
+  }
+
+}
+
+/* Learn Something New Everyday */
+
+.container {
+  width: 100%;
+  background-color: rgb(137,234,255);
+  position: relative;
+  z-index: 15;
+  top: 4rem;
+  display: flex;
+}
+
+.learn {
+  display: flex;
+  padding: 32px 24px;
+}
+
+.img {
+  display: flex;
+  width: 60%;
+  margin-right: 40px;
+}
+
+.imgcontent img {
+  max-width: 100%;
+  height: auto;
+}
+
+.learncontent {
+  color: rgb(16,16,16);
+  margin-top: 3rem;
+  line-height: 1.3;
+  width: 22rem;
+  display: block;
+}
+
+.learncontent h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.learncontent p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.learncontent span {
+  background-color: rgb(107,124,127);
+  padding: 8px 0px;
+  display: flex;
+  justify-content: center;
+  width: 85%;
+}
+
+.learncontent span a {
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.learncontent span a:hover {
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+
+.learncontent span a:active {
+  background-color: yellow;
+  color: black;
+  border-radius: 3px;
+}
+
+.startbutton {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mobilecontent {
+  display: none;
+}
+
+@media only screen and (max-width: 1079px) {
+
+  body {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+  }
+  .learncontent {
+    margin-top: 0.5rem;
+  }
+
+  .learncontent h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .learncontent p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .learncontent {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .mobilecontent {
+    max-width: 100%;
+    height: 9.25rem;
+    background-image: url("../images/books-library.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: stretch;
+    display: flex;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .imgcontent {
+    display: none;
+  }
+
+  .learncontent {
+    color: rgb(64,64,64);
+    line-height: 1.4;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .learncontent h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 2rem 1rem;
+    width: auto;
+  }
+
+  .learncontent p {
+    font-size: 1.2rem;
+    margin: 0 1rem 1.5rem 1rem;
+    width: auto;
+  }
+
+  .startbutton {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .learncontent span {
+    background-color: rgb(128,128,128);
+    padding: 8px 0px;
+    margin: 0 1rem 2rem 1rem;
+    width: 100%;
+  }
+
+  .learncontent span a {
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}
+
+/* Practicing */
+
+.practice {
+  width: 100%;
+  position: relative;
+  top: 4rem;
+  z-index: 10;
+  background-color: rgb(213,248,255);
+  display: flex;
+}
+
+.practicecontent {
+  padding: 32px 0px 32px 24px;
+  display: flex;
+  color: rgb(16,16,16);
+}
+
+.left {
+  margin-right: 24px;
+}
+
+.reading {
+  margin-bottom: 2rem;
+}
+
+.reading img {
+  max-width: 100%;
+  height: auto;
+}
+
+.left h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.left p {
+  font-weight: 100;
+  margin-bottom: 32px;
+}
+
+.left span {
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
+.right {
+  width: 423px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  width: 423px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.desktoppic {
+  width: 35%;
+}
+
+.desktop img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem;
+  border: 1px solid rgb(220,220,220);
+}
+
+#sack {
+  background-color: rgb(255,233,155);
+}
+
+.text {
+  color: rgb(16,16,16);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 2.5rem 1.5rem 3rem 2rem;
+
+}
+
+#special {
+  display: none;
+}
+
+.text h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: .4px;
+}
+
+.text span {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.text a {
+  color: blue;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.text a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.text a:active {
+  text-decoration: underline;
+  color: purple;
+}
+
+#osack {
+  margin: 0;
+  line-height: 2;
+}
+
+.mobilepict {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+
+  .practice  {
+    padding: 0rem;
+    margin: 0rem;
+  }
+  .practicecontent {
+    margin: 1rem;
+    padding: 0rem;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .info {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobilepict {
+    display: block;
+    padding: 0rem;
+    width: 100%;
+  }
+
+  .mobilepict img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .text {
+    margin: 1rem 0 1rem 1rem;
+    padding: 0rem;
+  }
+
+  #special {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .text h2 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    padding: 0;
+  }
+
+  .text span {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .text a {
+    font-size: 0.9rem;
+    margin-bottom: 0rem;
+  }
+
+  #guest {
+  display: none;
+  }
+
+  #sack {
+    background-color: rgb(213,248,255);
+  }
+
+}
+
+/* Start Learning */
+
+  .learning {
+    position: relative;
+    z-index: 10;
+    top: 4rem;
+    background-color: rgb(123,211,229);
+    padding-bottom: 1.5rem;
+  }
+
+  .learning h1 {
+    color: rgb(16,16,16);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 2rem 0 1.5rem 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .learnbox {
+    color: rgb(64,64,64);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+
+  }
+
+  .subjects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .subjectbox {
+    height: 276px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 1rem;
+    background-color: white;
+
+  }
+
+  .subjectpic {
+    margin: 0;
+    padding: 0;
+  }
+
+  .subjectpic img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .subjecttext {
+    margin: 0;
+    padding: 0;
+  }
+
+  .subjecttext h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.9rem 0rem 0.5rem 1rem;
+    padding: 0;
+  }
+
+  .subjecttext span {
+    display: inline-block;
+    margin: 0 0 0.5rem 1rem;
+    color: rgb(52,89,97);
+    font-size: 0.85rem;
+  }
+
+  .subjecttext span, p {
+    font-weight: 300;
+  }
+
+  .subjecttext p {
+    margin: 0 0 1.5rem 1rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    body {
+      width: 100%;
+    }
+
+    .subjectpic img {
+      display: none;
+    }
+
+    .subjecttext span, p {
+      display: none;
+    }
+
+    .learning {
+      padding-bottom: 1rem;
+    }
+
+    .learning h1 {
+      padding: 2rem 0 1rem 0;
+    }
+
+    .subjecttext h2 {
+      align-items: center;
+      color: rgb(30,111,127);
+    }
+
+    .subjectbox {
+      height: 3.2rem;
+      width: 90%;
+      margin: 0.5rem;
+      padding: 0;
+      background-color: lightgray;
+    }
+  }
+
+/* Thesis Exhibit */
+
+  #thesis.learning {
+    background-color: rgb(109,187,204);
+    padding-bottom: 0;
+  }
+
+  #title {
+    color: rgb(16,16,16);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 2rem 0 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #thesis.practice {
+    padding-top: 0rem;
+  }
+
+  #thesis.left {
+    margin-right: 1rem;
+  }
+
+  .video {
+    margin-bottom: 1.5rem;
+  }
+
+  #thesis.left h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    padding: 0;
+
+  }
+
+  #thesis.left p {
+    margin-bottom: 0;
+  }
+
+  #fisma.right {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .info.dark {
+    background-color: rgb(240,240,240);
+  }
+
+  #fisma.info {
+    width: 423px;
+    height: auto;
+  }
+
+  #dtext {
+    margin: 0;
+    line-height: 2;
+  }
+
+@media only screen and (max-width: 600px) {
+
+  #fisma.right {
+    display: none;
+  }
+
+  #thesis.left {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  #thesis.left h1, p {
+    display: none;
+  }
+
+  #thesis.learning {
+    background-color: rgb(109,187,204);
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #thesis.practice {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .video {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 1.5rem;
+    margin: 0;
+  }
+
+  .video video {
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #title {
+    padding: 2rem 0;
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+/* Footer */
+
+ footer {
+   position: relative;
+   z-index: 5;
+   top: 4rem;
+   background-color: white;
+   height: 3rem;
+   max-width: 100%;
+   padding: 1.5rem;
+   display: flex;
+   align-items: center;
+   font-weight: 300;
+   font-size: 0.9rem;
+ }
+
+ footer span {
+   flex-grow: 1;
+ }
+
+ footer nav a {
+   padding: 0 0.5rem;
+   text-decoration: none;
+   color: rgb(64, 64, 64);
+ }
+
+ @media only screen and (max-width: 600px) {
+
+   footer {
+     padding: 1rem;
+     height: auto;
+     font-size: 0.75rem;
+   }
+   footer nav a {
+     display: none;
+   }
+ }
